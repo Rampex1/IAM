@@ -1,0 +1,37 @@
+{
+  "AdminAccess": {
+    "Statements": [
+      {
+        "Effect": "Allow",
+        "Actions": [
+          "*"
+        ],
+        "Resources": [
+          "*"
+        ]
+      }
+    ]
+  },
+  "ReadOnlyStore": {
+    "Statements": [
+      {
+        "Effect": "Allow",
+        "Actions": [
+          "storage:Get*"
+        ],
+        "Resources": [
+          "arn:storage:bucket/*"
+        ]
+      },
+      {
+        "Effect": "Deny",
+        "Actions": [
+          "storage:Get*"
+        ],
+        "Resources": [
+          "arn:storage:bucket/secret/*"
+        ]
+      }
+    ]
+  }
+}

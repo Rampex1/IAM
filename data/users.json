@@ -1,0 +1,12 @@
+{
+  "david": {
+    "policies": [
+      "ReadOnlyStore"
+    ]
+  },
+  "admin_user": {
+    "policies": [
+      "AdminAccess"
+    ]
+  }
+}
